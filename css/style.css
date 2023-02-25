@@ -140,9 +140,202 @@ body{
 }
 .knowledge{
     background-color: #e5e5f7;
-    
     background-image:  radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
     background-size: 20px 20px;
     background-position: 0 0,10px 10px;
-    overflow: hidden;;
+    overflow: hidden;
+}
+.knowledge__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    align-items: center;
+
+
+}
+.knowledge__picture{
+    max-width: 500px;
+}
+.knowledge__paragraph{
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+.knowledge__img{
+    width: 100%;
+    display: block;
+}
+.knowledege__texts{
+    margin: 10%;
+}
+.price{
+    text-align: center;
+}
+.price__table{
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.price__element{
+    text-align: center;
+    border-radius: 10px;
+    width: 330px;
+    padding: 40px;
+    background-color: #e5e5f7;
+    --color-plan:#696871;
+    --color-price:#1d293f;
+    --bg-cta:#fff;
+    --color-cta:#5454d4;
+    --color-items:#696871;
+}
+.price__element--best{
+    width: 370px;
+    padding: 60px 40px;
+    background-color: #ff7143;
+    --color-plan:rgba(255 255 255 / 75%);
+    --color-price:#fff;
+    --bg-cta:#9f3919;
+    --color-cta:#fff;
+    --color-items:#fff;
+
+}
+.price__name{
+    color: var(--color-plan);
+    margin-bottom: 15px;
+    font-weight: 300;
+
+}
+.price__price{
+    font-size: 2.2rem;
+    color: var(--color-price);
+    font-weight: 600;
+}
+.price__items{
+    margin-top: 35px;
+    display: grid;
+    gap: 1em;
+    font-weight: 300;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    color: var(--color-items);
+}
+.plan__cta{
+    display: block;
+    padding: 20px 0;
+    border-radius: 10px;
+    background-color: var(--bg-cta);
+    font-weight: 600;
+    box-shadow: 0 0 1px rgba(0, 0, 0, .5);
+    color:var(--color-cta) ;
+}
+/* testimony */
+.testimony{
+    background-color: #e5e5f7;
+}
+.testimony__container{
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    gap: 1em;
+    align-items: center;
+}
+.testimony__body{
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    opacity: 0;
+    pointer-events: none;
+}
+.testimony__body--shown{
+    pointer-events: unset;
+    opacity: 1;
+    transition: opacity 1.5s easy-in-out;
+}
+.testimony__img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 50% 30%;
+}
+.testimony__text{
+    max-width: 700px;
+
+}
+.testimony__therapy{
+    /* background-color: royalblue; */
+    color: #595555;
+    display: inline-block;
+    padding:5px;
+    font-weight: 400;
+    
+}
+.testimony__arrow{
+    width: 90%;
+    cursor: pointer;
+}
+/* questions */
+.questions{
+    text-align: center;
+}
+.question__container{
+    display: grid;
+    gap: 2em;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+.question__padding{
+    padding: 0;
+    transition: padding .3s;
+    border:  1px solid #5454d4;
+    border-radius: 6px;
+}
+.question__padding--add{
+    padding-bottom: 30px;
+    transition: padding .2s;
+    border: 1px solid #5454d4;
+    border-radius: 6px;
+
+}
+.question__answer{
+    padding: 0 30px 0 ;
+   overflow: hidden;
+ 
+}
+.questions__title{
+    display: flex;
+    font-size: 20px;
+    padding: 30px 0 30px;
+    cursor: pointer;
+    color: var(--color-title);
+    justify-content: space-between;
+    
+}
+.questions__arrow{
+    border-radius: 50%;
+    background-color: var(--color-title);
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    margin-left: 10px;
+    transition: transform 0.3s;
+}
+.questions__arrow--rotate{
+    transform: rotate(180deg);
+}
+.questions__show{
+    text-align: left;
+    height: 0;
+    transition: height .3s;
+}
+.question__img{
+    display: block;
 }
