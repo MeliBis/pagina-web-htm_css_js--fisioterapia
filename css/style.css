@@ -1,6 +1,7 @@
 :root{
     --padding-container:100px 0;
     --color-title:#001a49;
+    scroll-behavior: smooth;
 }
 *{
     margin: 0;
@@ -375,7 +376,7 @@ body{
     margin: 0 auto;
     text-align: center;
     margin-bottom: 30px;
-    font-size: 2rem;
+    font-size: 1rem;
 }
 .footer{
     background-color: #1d293f;

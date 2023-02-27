@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/normaliaze.css">
     <link rel="stylesheet" href="./css/style.css">
+    
 
     <meta name="theme-color" content="#2091f9">
     <!-- Primary Meta Tags -->
@@ -39,16 +40,16 @@
             </div>
             <ul class="nav__link nav__link--menu">
                 <li class="nav__items">
-                    <a href="" class="nav__links">Inicio</a>
+                    <a href="#" class="nav__links">Inicio</a>
                 </li>
                 <li class="nav__items">
-                    <a href="·" class="nav__links" id="tipos">Tipo de terapia</a>
+                    <a href="#terapia" class="nav__links" >Tipo de terapia</a>
                 </li>
                 <li class="nav__items">
-                    <a href="" class="nav__links" id="contacto">Contacto</a>
+                    <a href="#contacto" class="nav__links">Contacto</a>
                 </li>
                 <li class="nav__items">
-                    <a href="" class="nav__links">Testimonios</a>
+                    <a href="#testimonios" class="nav__links">Testimonios</a>
                 </li>
                 <img src="./assets/icons/close.svg" alt="cerrar" class="nav__close">
             </ul>
@@ -65,7 +66,7 @@
 
     <main>
         <section class="container terapia">
-            <h2 class="subtitle" id="#tipos">Terapias disponibles</h2>
+            <h2 class="subtitle" id="terapia">Terapias disponibles</h2>
             <p class="terapias__paragraph">Somos expertos en mejorar padecimientos físicos causados por algún accidente, enfermedad o malas posturas</p>
             <div class="terapias__main">
                 <article class="terapias__icons">
@@ -85,12 +86,12 @@
                 </article>
             </div>
         </section>
-        <section class="knowledge  ">
-            <div class="knowledge__container container">
-                <div class="knowledege__texts">
+        <section class="knowledge ">
+            <div class="knowledge__container container" id="contacto">
+                <div class="knowledege__texts" >
                 <h2 class="subtitle">Contáctanos y estarás más cerca de las terapias que cambiarán tu vida </h2>
                 <p class="knowledge__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quo harum dolorum nam, modi, quae odio esse sequi ullam eligendi quam expedita repellendus tempora nemo aliquam animi quas dicta velit!</p>
-                <a href="·" class="cta">Agenda tu cita</a>
+                <a href="#" class="cta">Agenda tu cita</a>
             </div>
             <figure class="knowledge__picture">
                 <img src="./assets/img/compu.png" alt="fisio" class="knowledge__img">
@@ -137,7 +138,7 @@
             </div>
         </section>
         <!-- slider -->
-        <section class="testimony">
+         <section class="testimony" id="testimonios">
             <div class="testimony__container container">
                 <img src="./assets/icons/bx-left-arrow-alt.svg" class="testimony__arrow" id="before" alt="">
                 <section class="testimony__body testimony__body--shown" data-id="1">
@@ -169,7 +170,8 @@
                 </section> 
                 <img src="./assets/icons/bx-right-arrow-alt.svg" class="testimony__arrow" id="next" alt="">
             </div>
-        </section>
+        </section> 
+     
         <section class="questions container">
             <h2 class="subtitle">Preguntas frecuentes</h2>
             <p class="questions_paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae totam doloremque perspiciatis consectetur quas iusto? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, blanditiis?</p>
