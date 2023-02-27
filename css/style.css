@@ -2,7 +2,11 @@
     --padding-container:100px 0;
     --color-title:#001a49;
 }
-
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
     font-family: 'Poppins', sans-serif;
 
@@ -76,7 +80,7 @@ body{
 /* hero-container */
 .hero__container{
     display: grid;
-    min-width: 800px;
+    max-width: 800px;
     --padding-container:0;
     grid-template-rows: max-content;
     align-content: center;
@@ -140,6 +144,7 @@ body{
     width:40px;
     margin: 0 auto;
 }
+/* knowledge */
 .knowledge{
     background-color: #e5e5f7;
     background-image:  radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
@@ -149,7 +154,7 @@ body{
 }
 .knowledge__container{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr ;
     gap: 1em;
     align-items: center;
 
@@ -169,6 +174,7 @@ body{
 .knowledege__texts{
     margin: 10%;
 }
+/* price */
 .price{
     text-align: center;
 }
@@ -196,13 +202,14 @@ body{
     width: 370px;
     padding: 60px 40px;
     background-color: #ff7143;
+    color: #fff;
     --color-plan:rgba(255 255 255 / 75%);
     --color-price:#fff;
     --bg-cta:#9f3919;
     --color-cta:#fff;
     --color-items:#fff;
-
 }
+
 .price__name{
     color: var(--color-plan);
     margin-bottom: 15px;
@@ -231,6 +238,27 @@ body{
     font-weight: 600;
     box-shadow: 0 0 1px rgba(0, 0, 0, .5);
     color:var(--color-cta) ;
+    text-decoration: none;
+    color: var();
+}
+ .plan__cta:hover{
+    color: #fff;
+    background-color:var(--color-cta);
+    border: 2px solid var(--bg-cta);
+} 
+.plan__cta--best{
+    display: block;
+  padding: 20px 0;
+  border-radius: 10px;
+  background-color: var(--bg-cta);
+  font-weight: 600;
+  box-shadow: 0 0 1px rgba(0, 0, 0, .5);
+  color:var(--color-cta) ;
+  text-decoration: none;
+}
+.plan__cta--best:hover{
+    background-color: #fff;
+    color: var(--bg-cta);
 }
 /* testimony */
 .testimony{
@@ -242,6 +270,7 @@ body{
     gap: 1em;
     align-items: center;
 }
+/* caja de testimonio ( slider */
 .testimony__body{
     display: grid;
     grid-template-columns: 1fr max-content;
@@ -270,8 +299,8 @@ body{
 
 }
 .testimony__therapy{
-    /* background-color: royalblue; */
-    color: #595555;
+    background-color: royalblue; 
+    color: #fff;
     display: inline-block;
     padding:5px;
     font-weight: 400;
@@ -406,6 +435,12 @@ flex-wrap: wrap;
     font-size: 1rem;
     color: #fff;
     border-radius: 10px;
+    cursor: pointer;
+}
+.footer__submit:hover{
+    color:#2091f9;
+    border: 1px solid #2091f9;
+    background-color: #fff;
 }
 .footer__copy{
     --padding-container:30px 0;
@@ -421,4 +456,84 @@ flex-wrap: wrap;
 }
 .footer__img{
     width: 30px;
+}
+/* media queries */
+@media (max-width:800px){
+    .nav__menu{
+        display: block;
+    }
+    .nav__link--menu{
+        position: fixed;
+        background-color: #000;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: 100;
+        opacity: 0;
+        pointer-events: none;
+        transition:.7s opacity;
+    }
+    .nav__link--show{
+        --show:block;
+        opacity: 1;
+        pointer-events: unset;
+    }
+    .nav__close{
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: 30px;
+        cursor: pointer;
+    }
+    .hero__title{
+        font-size: 2.5rem;
+    }
+    .terapias__main{
+        gap: 2em;
+    }
+    .terapias__icons:last-of-type{
+        grid-column: 1/-1;
+    }
+    .knowledge__container{
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content 1fr;
+        gap: 3em;
+        text-align: center;
+    }
+    .knowledge__picture{
+        grid-row: 1/2;
+        justify-self: center;
+    }
+    .testimony__container{
+        grid-template-columns: 30px 1fr 30px;
+    }
+    .testimony__body{
+        grid-template-columns: 1fr;
+        grid-template-columns: max-content max-content;
+        gap: 3em;
+        justify-content: center;
+    }
+    .testimony__img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .questions__copy{
+        width: 100%;
+    }
+    .hero__container{
+        font-size: 10%;
+    }
+    .footer__container{
+        flex-wrap: wrap;
+    }
+    .nav--footer{
+        width: 100%;
+        justify-items: center;
+    }
 }
