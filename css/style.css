@@ -530,7 +530,9 @@ flex-wrap: wrap;
     }
     .hero__container{
         font-size: 70%;
-        
+    }
+    .hero__paragraph{
+        font-size: 15px;
     }
    
     .footer__container{
