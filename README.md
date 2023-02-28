@@ -1,3 +1,5 @@
 Herramientas utilizadas para la construcción de la página:
 
-https://bennettfeely.com/clippy/ --> figura en cover
+figura en cover --> https://bennettfeely.com/clippy/
+meta tags --> https://metatags.io/ 
+encviar correor--> https://formspree.io/ 
